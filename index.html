@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZwiftToSuunto</title>
+    <meta
+      name="description"
+      content="A small macOS app that automatically sends your Zwift rides to your Suunto account, so indoor training counts toward your training load."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <a class="logo" href="./"
+          ><span class="logo-mark">↗</span>ZwiftToSuunto</a
+        >
+        <nav>
+          <a href="#how">How it works</a>
+          <a href="#faq">FAQ</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+      </header>
+
+      <div class="hero">
+        <div>
+          <span class="badge">In development</span>
+          <h1>Your Zwift rides, in your Suunto training load.</h1>
+          <p class="lead">
+            A small macOS app that sends every Zwift ride to your Suunto account
+            automatically, so indoor training finally counts toward your TSS,
+            fitness and form.
+          </p>
+        </div>
+
+        <div class="window" aria-label="App preview">
+          <div class="titlebar">
+            <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+            <span>ZwiftToSuunto</span>
+          </div>
+          <div class="row">
+            <div>
+              <div class="ride">Watopia Hilly Route</div>
+              <div class="meta">Today · 40 min · 177 W avg</div>
+            </div>
+            <div class="status wait">Uploading…</div>
+          </div>
+          <div class="row">
+            <div>
+              <div class="ride">Group Ride: Endurance</div>
+              <div class="meta">Yesterday · 62 min · 164 W avg</div>
+            </div>
+            <div class="status ok">✓ Synced</div>
+          </div>
+          <div class="row">
+            <div>
+              <div class="ride">FTP Builder · Week 3</div>
+              <div class="meta">Mon · 55 min · 189 W avg</div>
+            </div>
+            <div class="status err">
+              Failed <button class="retry" type="button" disabled>Retry</button>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <div class="ride">Makuri Islands Loop</div>
+              <div class="meta">Sun · 75 min · 158 W avg</div>
+            </div>
+            <div class="status ok">✓ Synced</div>
+          </div>
+        </div>
+      </div>
+
+      <section id="how">
+        <h2>How it works</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="step-n">1</div>
+            <h3>Connect Suunto</h3>
+            <p>
+              Sign in once with your Suunto account. We never see your password.
+            </p>
+          </div>
+          <div class="card">
+            <div class="step-n">2</div>
+            <h3>Ride in Zwift</h3>
+            <p>
+              Zwift saves a standard FIT file for each ride on your Mac. The app
+              picks up new rides automatically.
+            </p>
+          </div>
+          <div class="card">
+            <div class="step-n">3</div>
+            <h3>See it in Suunto</h3>
+            <p>
+              Each ride is uploaded to your Suunto account with power, heart
+              rate and cadence intact.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Features</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Automatic sync</h3>
+            <p>
+              New rides upload in the background. No exporting, no dragging
+              files around.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Status and retry</h3>
+            <p>
+              A simple list shows every ride and its sync status, with one-click
+              retry if an upload fails.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Original data</h3>
+            <p>
+              Your ride file is passed through unchanged, so Suunto calculates
+              training load from real power data.
+            </p>
+          </div>
+          <div class="card">
+            <h3>No duplicates</h3>
+            <p>
+              Each ride is uploaded once. Skip rides you also recorded on your
+              watch.
+            </p>
+          </div>
+          <div class="card">
+            <h3>No Zwift login</h3>
+            <p>
+              The app only reads ride files already on your computer. Your Zwift
+              account is never touched.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Lightweight</h3>
+            <p>A small native Mac app that stays out of your way.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Which Zwift setups are supported?</summary>
+          <p>
+            Zwift running on a Mac. Zwift on Apple TV, iPad, iPhone or Android
+            doesn't store ride files where other apps can reach them, so those
+            aren't supported.
+          </p>
+        </details>
+        <details>
+          <summary>What shows up in Suunto?</summary>
+          <p>
+            Your ride appears in the Suunto app with its power, heart rate,
+            cadence and speed, and counts toward training load (TSS, fitness,
+            fatigue and form). Metrics that Suunto calculates only on the watch
+            during a workout, such as recovery time, aren't available for
+            uploaded workouts.
+          </p>
+        </details>
+        <details>
+          <summary>Do you need my Zwift or Suunto password?</summary>
+          <p>
+            No. Suunto uses a standard secure sign-in (OAuth), and the app never
+            asks for your Zwift account.
+          </p>
+        </details>
+        <details>
+          <summary>What does it cost?</summary>
+          <p>It's free.</p>
+        </details>
+      </section>
+
+      <footer>
+        <p>
+          ZwiftToSuunto is made by Sogaard Inc ·
+          <a href="mailto:jens@jenssogaard.com">jens@jenssogaard.com</a> ·
+          <a href="privacy.html">Privacy policy</a> ·
+          <a href="terms.html">Terms of use</a>
+        </p>
+        <p>
+          ZwiftToSuunto is an independent app and is not affiliated with,
+          endorsed by or sponsored by Zwift, Inc. or Suunto Oy. Zwift and Suunto
+          are trademarks of their respective owners.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
